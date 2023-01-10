@@ -11,7 +11,7 @@ int main(int argc, char **argv){
 
 	std::fstream file;
 	if (!strcmp(argv[1], "-h")){
-		std::cout << "Usage: cop <file>\nPrints contents of a file\nconcat -h: display this help message" << std::endl;
+		std::cout << "Usage: cop <file>\nPrints contents of a file\nUsage:\n\n  -h: display this help message" << std::endl;
 		exit(0);
 	}
 
@@ -22,13 +22,13 @@ int main(int argc, char **argv){
 		while(std::getline(file, line)){
 			line_number++;
 			if (line_number < 10)
-				std::cout << "    " << line_number << " | " << line << "\n";
+				std::cout << "    " << line_number << " " << line << "\n";
 			else if (line_number < 100)
-				std::cout << "   " << line_number << " | " << line << "\n";
+				std::cout << "   " << line_number << " " << line << "\n";
 			else if (line_number < 1000)
-				std::cout << "  " << line_number << " | " << line << "\n";
+				std::cout << "  " << line_number << " " << line << "\n";
 			else if (line_number < 10000)
-				std::cout << " " << line_number << " | " << line << "\n";
+				std::cout << " " << line_number << " " << line << "\n";
 		}
 		file.close();
 	}
