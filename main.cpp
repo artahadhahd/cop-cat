@@ -22,13 +22,13 @@ int main(int argc, char **argv){
 		while(std::getline(file, line)){
 			line_number++;
 			if (line_number < 10)
-				std::cout << "    " << line_number << " | " << line << "\n";
+				std::cout << "    " << line_number << " " << line << "\n";
 			else if (line_number < 100)
-				std::cout << "   " << line_number << " | " << line << "\n";
+				std::cout << "   " << line_number << " " << line << "\n";
 			else if (line_number < 1000)
-				std::cout << "  " << line_number << " | " << line << "\n";
+				std::cout << "  " << line_number << " " << line << "\n";
 			else if (line_number < 10000)
-				std::cout << " " << line_number << " | " << line << "\n";
+				std::cout << " " << line_number << " " << line << "\n";
 		}
 		file.close();
 	}
