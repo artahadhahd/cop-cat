@@ -1,9 +1,22 @@
 # cop-cat
-My implementation of the cat command in Linux.
+My implementation of the cat command in Linux. It's ought to be easy on the eye.
 
 # Build and install
-Run `make` to build cop.
+```
+$ git clone https://github.com/artahadhahd/cop-cat # Clone the repository
+$ cd cop-cat/
+$ make && sudo make install # compile
+[sudo] password for user:
+g++ main.cpp -o cop
+mv ./cop /usr/bin
+chmod 755 /usr/bin/cop
+$ cop -h # You can now check whether it's installed.
+Usage: cop <file>
+Prints contents of a file
+Usage:
 
-Then, run `make install` (as root) to install cop.
+  -h: display this help message
+```
+You can customize the Makefile yourself!
 
-As last, you can run `cop` now.
+### Thank you for using cop-cat!
