@@ -1,6 +1,5 @@
 all:
-  g++ main.cpp -o cop
+        g++ main.cpp -o cop
   
 install:
-  cp ./cop /usr/bin
-  chmod 755 /usr/bin/cop
+        cp ./cop /usr/bin
