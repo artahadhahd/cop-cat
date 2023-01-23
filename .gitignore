@@ -1,0 +1,8 @@
+# Debug/Output files
+*.exe
+*.pdb
+*.o
+*.out
+
+# VS Code files
+/.vscode

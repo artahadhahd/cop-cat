@@ -18,6 +18,7 @@ int main(int argc, char **argv){
 	unsigned int line_number = 0;
 	file.open(argv[1], std::ios::in);
 	if (file.is_open()){
+		std::cout << "Contents of " << argv[1] << std::endl;
 		std::string line;
 		while(std::getline(file, line)){
 			line_number++;
@@ -29,6 +30,8 @@ int main(int argc, char **argv){
 				std::cout << "  " << line_number << " | " << line << "\n";
 			else if (line_number < 10000)
 				std::cout << " " << line_number << " | " << line << "\n";
+			else if (line_number < 100000)
+				std::cout << line_number << " | " << line << "\n";
 		}
 		file.close();
 	}
@@ -36,4 +39,5 @@ int main(int argc, char **argv){
 		std::cout << "cop: file \"" << argv[1] << "\" was not found.\n";
 		exit(1);
 	}
+	return 0;
 }

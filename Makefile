@@ -1,5 +1,5 @@
-all:
-        g++ main.cpp -o cop
-  
-install:
-        mv ./cop /usr/bin
+all: 
+	g++ main.cpp -o cop
+
+install: 
+	mv ./cop /usr/bin
